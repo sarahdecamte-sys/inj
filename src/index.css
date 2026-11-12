@@ -2067,3 +2067,229 @@ button {
     width: 85px;
   }
 }
+
+
+/* =========================================
+   RESPONSIVE FINAL - JMG
+========================================= */
+
+/* Éviter les débordements horizontaux */
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+.app-shell,
+.main-area,
+.content,
+.dashboard-home,
+.jmg-cards-page {
+  min-width: 0;
+  max-width: 100%;
+}
+
+img,
+svg {
+  max-width: 100%;
+}
+
+/* TABLETTE */
+@media (min-width: 701px) and (max-width: 1050px) {
+  .sidebar {
+    width: 200px;
+    padding: 24px 12px;
+  }
+
+  .main-area {
+    margin-left: 200px;
+  }
+
+  .content {
+    padding: 22px 18px 35px;
+  }
+
+  .topbar {
+    padding: 0 20px;
+  }
+
+  .stats-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .stat-card:last-child {
+    grid-column: auto;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .transfer-layout {
+    grid-template-columns: minmax(0, 1fr) minmax(180px, .7fr);
+  }
+}
+
+/* MOBILE */
+@media (max-width: 700px) {
+  .content {
+    width: 100%;
+    padding: 15px 12px 25px;
+  }
+
+  .page-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .balance-grid,
+  .account-list,
+  .budget-grid,
+  .transfer-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .stats-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .stat-card:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .transaction-row {
+    min-width: 0;
+  }
+
+  .transaction-info {
+    overflow: hidden;
+  }
+
+  .transaction-info strong,
+  .transaction-info small {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .transaction-amount {
+    min-width: 75px;
+    white-space: nowrap;
+  }
+
+  .detail-line {
+    flex-wrap: wrap;
+    overflow-wrap: anywhere;
+  }
+
+  .detail-line strong {
+    overflow-wrap: anywhere;
+  }
+
+  .transfer-panel,
+  .budget-panel {
+    padding: 16px;
+  }
+
+  .login-screen {
+    padding: 15px;
+  }
+
+  .login-card {
+    padding: 23px 18px;
+    border-radius: 17px;
+  }
+
+  .dashboard-home {
+    width: 100%;
+    padding: 17px 12px 100px;
+  }
+
+  .dashboard-quick-actions {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .dashboard-upcoming-item,
+  .dashboard-transactions .transaction-row {
+    min-width: 0;
+  }
+
+  .dashboard-upcoming-item .transaction-amount {
+    min-width: 65px;
+    white-space: nowrap;
+  }
+
+  .jmg-bank-card {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .jmg-card-number {
+    overflow-wrap: anywhere;
+  }
+
+  .bottom-nav,
+  .dashboard-bottom-nav {
+    padding-bottom: max(8px, env(safe-area-inset-bottom));
+  }
+}
+
+/* PETITS TÉLÉPHONES */
+@media (max-width: 380px) {
+  .content {
+    padding-left: 9px;
+    padding-right: 9px;
+  }
+
+  .dashboard-home {
+    padding-left: 9px;
+    padding-right: 9px;
+  }
+
+  .dashboard-topbar h1 {
+    font-size: 22px;
+  }
+
+  .dashboard-quick-actions .quick-icon {
+    width: 47px;
+    height: 47px;
+  }
+
+  .dashboard-quick-actions button {
+    font-size: 9px;
+  }
+
+  .stats-row {
+    gap: 7px;
+  }
+
+  .stat-card {
+    padding-left: 46px;
+  }
+
+  .transaction-amount {
+    min-width: 65px;
+    font-size: 9px;
+  }
+
+  .jmg-bank-card {
+    min-height: 185px;
+    padding: 13px;
+  }
+
+  .jmg-card-number {
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+
+  .login-brand b {
+    font-size: 44px;
+  }
+}

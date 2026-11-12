@@ -1,0 +1,6 @@
+import PageTitle from "../components/PageTitle";
+const money = v => new Intl.NumberFormat("nl-NL", { style: "currency", currency: "EUR" }).format(v);
+export default function BudgetPage() {
+  const spent = 1270.89, budget = 2500, percent = Math.round(spent / budget * 100);
+  return <><PageTitle title="Budget" subtitle="Volg je uitgaven binnen een voorbeeldbudget."/><div className="budget-grid"><section className="panel budget-panel"><div className="section-title"><h2>Maandelijks budget</h2><span className="pill">Voorbeeld</span></div><p className="muted">Uitgaven ten opzichte van een voorbeeldbudget.</p><div className="budget-number">{money(spent)} <span>van {money(budget)}</span></div><div className="progress"><i style={{width: `${percent}%`}}/></div><div className="budget-ends"><span>0%</span><strong>{percent}% gebruikt</strong><span>100%</span></div></section><section className="panel budget-panel"><h2>Budgetoverzicht</h2><div className="detail-line"><span>Maandbudget</span><strong>{money(budget)}</strong></div><div className="detail-line"><span>Uitgaven</span><strong>{money(spent)}</strong></div><div className="detail-line"><span>Resterend</span><strong>{money(budget-spent)}</strong></div></section></div></>;
+}

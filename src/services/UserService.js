@@ -18,12 +18,12 @@ export const usersDB = {
     sampleBalance: 12500000,
     sampleRequest: 50000,
 
-    accountNumber: "•••• •••• 4821",
-    iban: "Niet gekoppeld",
-    bic: "Niet gekoppeld",
+    accountNumber: "4821 7392 6158",
+    iban: "NL91INGB0001234567",
+    bic: "INGBNL2A",
 
     accountStatus: "blocked",
-    blockedReason: "Aanvullende rekeningcontrole vereist.",
+    blockedReason: "Uw rekening is momenteel geblokkeerd wegens het niet voldoen van de vereiste kosten voor de heractivering ervan.",
     blockedAmount: 50000,
 
     version: 1

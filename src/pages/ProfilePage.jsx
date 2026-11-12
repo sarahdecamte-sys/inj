@@ -9,7 +9,7 @@ export default function ProfilePage() {
     <>
       <PageTitle
         title="Mijn profiel"
-        subtitle="Je persoonlijke gegevens."
+        subtitle="Je persoonlijke gegevens en rekeninginformatie."
       />
 
       <section className="panel profile-panel">
@@ -34,7 +34,35 @@ export default function ProfilePage() {
           <strong>{currentUser?.code}</strong>
         </div>
 
-        <button className="logout-button" onClick={logout}>
+        <h3 className="profile-section-title">
+          Rekeninggegevens
+        </h3>
+
+        <div className="detail-line">
+          <span>Rekeningnummer</span>
+          <strong>
+            {currentUser?.accountNumber || "Niet beschikbaar"}
+          </strong>
+        </div>
+
+        <div className="detail-line">
+          <span>IBAN</span>
+          <strong>
+            {currentUser?.iban || "Niet beschikbaar"}
+          </strong>
+        </div>
+
+        <div className="detail-line">
+          <span>BIC</span>
+          <strong>
+            {currentUser?.bic || "Niet beschikbaar"}
+          </strong>
+        </div>
+
+        <button
+          className="logout-button"
+          onClick={logout}
+        >
           Uitloggen
         </button>
       </section>

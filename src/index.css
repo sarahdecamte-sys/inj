@@ -2293,3 +2293,447 @@ svg {
     font-size: 44px;
   }
 }
+
+
+/* CORRECTION RESPONSIVE - PAGE DE CONNEXION */
+
+.login-screen {
+  width: 100%;
+  min-width: 0;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 24px 16px;
+  overflow-x: hidden;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 560px;
+  min-width: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.login-brand {
+  max-width: 100%;
+  min-width: 0;
+}
+
+.login-brand img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.login-form {
+  width: 100%;
+  min-width: 0;
+}
+
+.login-form label {
+  display: block;
+  width: 100%;
+  min-width: 0;
+}
+
+.login-form input {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.login-form .primary-button {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.fine-print {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 600px) {
+  .login-screen {
+    padding: 16px 12px;
+  }
+
+  .login-card {
+    padding: 28px 20px;
+    border-radius: 24px;
+  }
+
+  .login-card h1 {
+    font-size: clamp(28px, 8vw, 40px);
+  }
+
+  .login-brand img {
+    max-width: 100%;
+  }
+
+  .login-form input {
+    font-size: 16px;
+  }
+
+  .login-form .primary-button {
+    gap: 10px;
+    justify-content: center;
+  }
+}
+
+
+/* =========================================
+   DASHBOARD - RESPONSIVE MOBILE
+========================================= */
+
+.dashboard-home {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  overflow-x: clip;
+}
+
+.dashboard-home *,
+.dashboard-home *::before,
+.dashboard-home *::after {
+  box-sizing: border-box;
+}
+
+.dashboard-home > section,
+.dashboard-topbar {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.dashboard-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.dashboard-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.dashboard-account-slider {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.dashboard-account-card {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.account-balance {
+  display: block;
+  max-width: 100%;
+  font-size: clamp(25px, 7vw, 48px);
+  overflow-wrap: anywhere;
+}
+
+.account-blocked-panel {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.account-blocked-panel .section-title,
+.blocked-heading,
+.blocked-reason,
+.blocked-amount {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.blocked-heading h2,
+.blocked-reason strong,
+.blocked-reason p,
+.blocked-amount span,
+.blocked-amount strong {
+  overflow-wrap: anywhere;
+}
+
+.blocked-reason,
+.blocked-amount {
+  width: 100%;
+}
+
+.dashboard-quick-actions {
+  width: 100%;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.dashboard-quick-actions button {
+  min-width: 0;
+  max-width: 100%;
+  padding-left: 2px;
+  padding-right: 2px;
+  text-align: center;
+}
+
+.dashboard-quick-actions button > span:last-child {
+  display: block;
+  overflow-wrap: anywhere;
+}
+
+.dashboard-content-section {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.dashboard-section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-width: 0;
+}
+
+.dashboard-section-heading h2 {
+  overflow-wrap: anywhere;
+}
+
+.dashboard-section-heading button {
+  flex-shrink: 0;
+}
+
+.dashboard-upcoming-item {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.upcoming-description {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.transaction-amount {
+  flex-shrink: 0;
+}
+
+.dashboard-transactions {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: auto;
+}
+
+.dashboard-bottom-nav {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.dashboard-bottom-nav button {
+  min-width: 0;
+  flex: 1 1 0;
+}
+
+.dashboard-bottom-nav button span {
+  max-width: 100%;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+/* TABLETTES */
+
+@media (min-width: 701px) and (max-width: 1050px) {
+  .dashboard-home {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .dashboard-account-card {
+    padding: 25px;
+  }
+}
+
+/* TÉLÉPHONES */
+
+@media (max-width: 700px) {
+  .dashboard-home {
+    padding: 0;
+    margin: 0;
+  }
+
+  .dashboard-topbar {
+    padding: 10px 2px 18px;
+  }
+
+  .dashboard-topbar h1 {
+    font-size: 25px;
+  }
+
+  .dashboard-topbar p {
+    font-size: 13px;
+  }
+
+  .dashboard-header-actions {
+    gap: 7px;
+  }
+
+  .dashboard-header-actions button {
+    padding: 7px;
+  }
+
+  .dashboard-account-slider {
+    margin-bottom: 24px;
+  }
+
+  .dashboard-account-card {
+    padding: 22px 18px;
+    border-radius: 18px;
+  }
+
+  .account-balance {
+    font-size: clamp(23px, 7vw, 36px);
+  }
+
+  .account-blocked-panel {
+    padding: 18px 14px;
+    border-radius: 20px;
+  }
+
+  .account-blocked-panel .section-title {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .blocked-heading {
+    gap: 9px;
+  }
+
+  .blocked-heading h2 {
+    font-size: 17px;
+  }
+
+  .blocked-reason {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 14px;
+  }
+
+  .blocked-reason p {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .blocked-amount {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 14px;
+  }
+
+  .blocked-amount strong {
+    font-size: 19px;
+  }
+
+  .dashboard-quick-actions {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 5px;
+    margin-top: 25px;
+  }
+
+  .dashboard-quick-actions button {
+    font-size: 12px;
+  }
+
+  .dashboard-quick-actions .quick-icon {
+    width: 58px;
+    height: 58px;
+    margin: 0 auto 8px;
+  }
+
+  .dashboard-section-heading {
+    align-items: flex-start;
+  }
+
+  .dashboard-section-heading h2 {
+    font-size: 18px;
+  }
+
+  .dashboard-section-heading button {
+    font-size: 11px;
+    white-space: nowrap;
+  }
+
+  .dashboard-bottom-nav {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 4px calc(10px + env(safe-area-inset-bottom));
+    background: #fff;
+    border-top: 1px solid #eee;
+  }
+
+  .dashboard-bottom-nav button {
+    flex: 1;
+    padding: 5px 1px;
+    gap: 4px;
+  }
+
+  .dashboard-bottom-nav button span {
+    font-size: 10px;
+  }
+
+  .dashboard-content-section {
+    margin-bottom: 24px;
+  }
+}
+
+/* PETITS TÉLÉPHONES */
+
+@media (max-width: 380px) {
+  .dashboard-header-actions {
+    gap: 3px;
+  }
+
+  .dashboard-header-actions button {
+    padding: 5px;
+  }
+
+  .blocked-heading h2 {
+    font-size: 15px;
+  }
+
+  .dashboard-quick-actions button {
+    font-size: 10px;
+  }
+
+  .dashboard-quick-actions .quick-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .dashboard-bottom-nav button span {
+    font-size: 9px;
+  }
+}

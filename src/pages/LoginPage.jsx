@@ -44,7 +44,7 @@ export default function LoginPage({ onLogin }) {
               onChange={(e) => setCode(e.target.value)}
               autoComplete="off"
               autoCorrect="off"
-              spellCheck="false"
+              spellCheck={false}
               inputMode="numeric"
               required
             />

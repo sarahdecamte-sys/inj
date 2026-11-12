@@ -24,6 +24,7 @@ export function AuthProvider({ children }) {
     }
 
     setCurrentUser(result.user);
+
     localStorage.setItem(
       STORAGE_KEY,
       JSON.stringify(result.user)
@@ -38,9 +39,7 @@ export function AuthProvider({ children }) {
   };
 
   return (
-    <AuthContext.Provider
-      value={{ currentUser, login, logout }}
-    >
+    <AuthContext.Provider value={{ currentUser, login, logout }}>
       {children}
     </AuthContext.Provider>
   );

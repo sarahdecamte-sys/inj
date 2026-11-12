@@ -3,12 +3,13 @@ import { useState } from "react";
 import { LockKeyhole, ArrowRight } from "lucide-react";
 
 export default function LoginPage({ onLogin }) {
-  const [code, setCode] = useState("07893516");
-  const [password, setPassword] = useState("260823");
+  const [code, setCode] = useState("");
+  const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
   const submit = (e) => {
     e.preventDefault();
+
     const result = onLogin(code, password);
     setError(result.success ? "" : result.message);
   };
@@ -19,7 +20,7 @@ export default function LoginPage({ onLogin }) {
 
         <div className="login-brand">
           <b>ING</b>
-          <img src="/images/L1.jpeg" alt="Logo" />
+          <img src="/images/L1.jpeg" alt="Logo ING" />
         </div>
 
         <p className="eyebrow">PERSOONLIJKE OMGEVING</p>
@@ -30,14 +31,20 @@ export default function LoginPage({ onLogin }) {
           Log in op uw persoonlijke omgeving.
         </p>
 
-        <form className="transfer-form login-form" onSubmit={submit}>
+        <form
+          className="transfer-form login-form"
+          onSubmit={submit}
+          autoComplete="off"
+        >
           <label>
             Gebruikersnummer
             <input
               type="text"
               value={code}
               onChange={(e) => setCode(e.target.value)}
-              autoComplete="username"
+              autoComplete="off"
+              autoCorrect="off"
+              spellCheck="false"
               inputMode="numeric"
               required
             />
@@ -49,7 +56,7 @@ export default function LoginPage({ onLogin }) {
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              autoComplete="current-password"
+              autoComplete="new-password"
               required
             />
           </label>
